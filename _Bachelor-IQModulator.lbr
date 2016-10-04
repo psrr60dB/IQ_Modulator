@@ -9115,6 +9115,21 @@ Source: VISHAY wscwsn.pdf</description>
 <text x="-4.572" y="-2.794" size="1.27" layer="51" ratio="10">3</text>
 <text x="3.556" y="-2.794" size="1.27" layer="51" ratio="10">4</text>
 </package>
+<package name="L0805">
+<text x="-0.635" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<smd name="P$1" x="-0.9" y="0" dx="1" dy="1.8" layer="1"/>
+<smd name="P$2" x="0.9" y="0" dx="1" dy="1.8" layer="1" rot="R180"/>
+<rectangle x1="0.6" y1="-0.6" x2="1" y2="0.7" layer="51"/>
+<rectangle x1="-1" y1="-0.6" x2="-0.6" y2="0.7" layer="51"/>
+<wire x1="-0.6" y1="0.6" x2="0.6" y2="0.6" width="0.127" layer="51"/>
+<wire x1="-0.6" y1="-0.5" x2="0.6" y2="-0.5" width="0.127" layer="51"/>
+<wire x1="-1.6" y1="1.1" x2="1.6" y2="1.1" width="0.05" layer="39"/>
+<wire x1="1.6" y1="1.1" x2="1.6" y2="-1.1" width="0.05" layer="39"/>
+<wire x1="1.6" y1="-1.1" x2="-1.6" y2="-1.1" width="0.05" layer="39"/>
+<wire x1="-1.6" y1="-1.1" x2="-1.6" y2="1.1" width="0.05" layer="39"/>
+<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.6001" layer="35"/>
+</package>
 </packages>
 <symbols>
 <symbol name="4539">
@@ -9624,12 +9639,21 @@ Source: VISHAY wscwsn.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="L1008" prefix="L" uservalue="yes">
+<deviceset name="L" prefix="L0805" uservalue="yes">
 <gates>
 <gate name="&gt;NAME" symbol="INDUCTOR" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="L1008">
+<connects>
+<connect gate="&gt;NAME" pin="1" pad="P$1"/>
+<connect gate="&gt;NAME" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="L0805" package="L0805">
 <connects>
 <connect gate="&gt;NAME" pin="1" pad="P$1"/>
 <connect gate="&gt;NAME" pin="2" pad="P$2"/>
