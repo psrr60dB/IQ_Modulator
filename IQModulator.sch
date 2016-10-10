@@ -13224,75 +13224,6 @@ Source: 008-0260-0_E.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="MicroUSB">
-<packages>
-<package name="USB-MICRO-SMD">
-<wire x1="-2.15" y1="3.9" x2="-2.15" y2="-3.9" width="0.127" layer="49"/>
-<wire x1="2.85" y1="3.9" x2="2.85" y2="-3.9" width="0.127" layer="49"/>
-<wire x1="2.85" y1="3.9" x2="-2.15" y2="3.9" width="0.127" layer="49"/>
-<wire x1="2.85" y1="-3.9" x2="-2.15" y2="-3.9" width="0.127" layer="49"/>
-<wire x1="2.981959375" y1="3.99288125" x2="2" y2="3.99288125" width="0.3048" layer="21"/>
-<wire x1="2" y1="3.99288125" x2="2" y2="4" width="0.3048" layer="21"/>
-<wire x1="3" y1="4" x2="3" y2="3" width="0.3048" layer="21"/>
-<wire x1="2" y1="-4" x2="3" y2="-4" width="0.3048" layer="21"/>
-<wire x1="3" y1="-4" x2="3" y2="-3" width="0.3048" layer="21"/>
-<wire x1="-1" y1="4" x2="-2" y2="4" width="0.3048" layer="21"/>
-<wire x1="-1" y1="-4" x2="-2" y2="-4" width="0.3048" layer="21"/>
-<wire x1="1.89991875" y1="1.6002" x2="2.499359375" y2="1.6002" width="0" layer="21"/>
-<rectangle x1="-0.75" y1="2.784" x2="0.75" y2="4.584" layer="1"/>
-<rectangle x1="-0.75" y1="-4.584" x2="0.75" y2="-2.784" layer="1"/>
-<rectangle x1="-0.75" y1="2.784" x2="0.75" y2="4.584" layer="31"/>
-<rectangle x1="-0.75" y1="-4.584" x2="0.75" y2="-2.784" layer="31"/>
-<rectangle x1="-0.85" y1="2.684" x2="0.85" y2="4.684" layer="29"/>
-<rectangle x1="-0.85" y1="-4.684" x2="0.85" y2="-2.684" layer="29"/>
-<smd name="D+1" x="2.7" y="0" dx="0.4" dy="1.4" layer="1" rot="R90"/>
-<smd name="D-1" x="2.7" y="0.65" dx="0.4" dy="1.4" layer="1" rot="R90"/>
-<smd name="GND1" x="2.7" y="-1.3" dx="0.4" dy="1.4" layer="1" rot="R90"/>
-<smd name="ID1" x="2.7" y="-0.65" dx="0.4" dy="1.4" layer="1" rot="R90"/>
-<smd name="VBUS1" x="2.7" y="1.3" dx="0.4" dy="1.4" layer="1" rot="R90"/>
-<text x="-1.27" y="5.969" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-1.27" y="5.461" size="0.4064" layer="27">&gt;VALUE</text>
-<hole x="2.2" y="1.9" drill="0.85"/>
-<hole x="2.2" y="-1.9" drill="0.85"/>
-</package>
-</packages>
-<symbols>
-<symbol name="USB_AB">
-<description>USB AB, 5-pins: USBVCC, GND, D+, D-, USBID.</description>
-<wire x1="2.54" y1="6.35" x2="-2.54" y2="6.35" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="6.35" x2="-2.54" y2="-6.35" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-6.35" x2="2.54" y2="-6.35" width="0.254" layer="94"/>
-<pin name="D+" x="-5.08" y="0" visible="pad" length="short"/>
-<pin name="D-" x="-5.08" y="-2.54" visible="pad" length="short"/>
-<pin name="GND" x="-5.08" y="5.08" visible="pad" length="short"/>
-<pin name="USBID" x="-5.08" y="2.54" visible="pad" length="short"/>
-<pin name="VBUS" x="-5.08" y="-5.08" visible="pad" length="short"/>
-<text x="1.27" y="-6.096" size="2.54" layer="94" rot="R90">USBAB</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="USB" prefix="U" uservalue="yes">
-<description>This is a USB AB connector that is compatible with USB OTG. i.e. this connector can serve as a host or device</description>
-<gates>
-<gate name="G$1" symbol="USB_AB" x="0" y="0"/>
-</gates>
-<devices>
-<device name="&quot;&quot;" package="USB-MICRO-SMD">
-<connects>
-<connect gate="G$1" pin="D+" pad="D+1"/>
-<connect gate="G$1" pin="D-" pad="D-1"/>
-<connect gate="G$1" pin="GND" pad="GND1"/>
-<connect gate="G$1" pin="USBID" pad="ID1"/>
-<connect gate="G$1" pin="VBUS" pad="VBUS1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="microbuilder">
 <description>&lt;h2&gt;&lt;b&gt;microBuilder.eu&lt;/b&gt; Eagle Footprint Library&lt;/h2&gt;
 
@@ -21494,6 +21425,203 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="Input-Output_Connectors_rev15d">
+<description>&lt;BR&gt;Wurth Elektronik - Input/Output Connectors &lt;br&gt;&lt;Hr&gt;
+&lt;BR&gt;&lt;BR&gt; 
+&lt;TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0&gt;
+&lt;TR&gt;   
+&lt;TD BGCOLOR="#cccccc" ALIGN=CENTER&gt;&lt;FONT FACE=ARIAL SIZE=3&gt;&lt;BR&gt;&lt;br&gt;
+      &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;BR&gt;
+       &lt;BR&gt;
+       &lt;BR&gt;
+       &lt;BR&gt;&lt;BR&gt;&lt;/FONT&gt;
+    &lt;/TD&gt;
+&lt;TD BGCOLOR="#cccccc" ALIGN=CENTER&gt;&lt;FONT FACE=ARIAL SIZE=3&gt;&lt;br&gt;
+      -----&lt;BR&gt;
+      -----&lt;BR&gt;
+      -----&lt;BR&gt;
+      -----&lt;BR&gt;
+      -----&lt;BR&gt;&lt;BR&gt;&lt;/FONT&gt;
+    &lt;/TD&gt;
+    &lt;TD BGCOLOR="#cccccc" ALIGN=CENTER&gt; &lt;FONT FACE=ARIAL SIZE=3&gt;&lt;br&gt;
+      ---------------------------&lt;BR&gt;
+&lt;B&gt;&lt;I&gt;&lt;span style='font-size:26pt;
+  color:#FF6600;'&gt;WE &lt;/span&gt;&lt;/i&gt;&lt;/b&gt;
+&lt;BR&gt;
+      ---------------------------&lt;BR&gt;&lt;b&gt;Würth Elektronik&lt;/b&gt;&lt;/FONT&gt;
+    &lt;/TD&gt;
+    &lt;TD BGCOLOR="#cccccc" ALIGN=CENTER&gt;&lt;FONT FACE=ARIAL SIZE=3&gt;&lt;br&gt;
+      ---------O---&lt;BR&gt;
+      ----O--------&lt;BR&gt;
+      ---------O---&lt;BR&gt;
+      ----O--------&lt;BR&gt;
+      ---------O---&lt;BR&gt;&lt;BR&gt;&lt;/FONT&gt;
+    &lt;/TD&gt;
+   
+&lt;TD BGCOLOR="#cccccc" ALIGN=CENTER&gt;&lt;FONT FACE=ARIAL SIZE=3&gt;&lt;BR&gt;
+      &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;BR&gt;
+       &lt;BR&gt;
+       &lt;BR&gt;
+       &lt;BR&gt;
+       &lt;BR&gt;&lt;BR&gt;&lt;/FONT&gt;
+    &lt;/TD&gt;
+  &lt;/TR&gt;
+
+  &lt;TR&gt;
+    &lt;TD COLSPAN=7&gt;&amp;nbsp;
+    &lt;/TD&gt;
+  &lt;/TR&gt;
+  
+&lt;/TABLE&gt;
+&lt;B&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;More than you expect&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;/B&gt;
+
+&lt;HR&gt;&lt;BR&gt;
+&lt;b&gt;Würth Elektronik eiSos GmbH &amp; Co. KG&lt;/b&gt;&lt;br&gt;
+EMC &amp; Inductive Solutions&lt;br&gt;
+
+Max-Eyth-Str.1&lt;br&gt;
+D-74638 Waldenburg&lt;br&gt;
+&lt;br&gt;
+Tel: +49 (0)7942-945-0&lt;br&gt;
+Fax:+49 (0)7942-945-405&lt;br&gt;
+&lt;br&gt;
+&lt;a href="http://www.we-online.com/eagle"&gt;http://www.we-online.com/eagle&lt;/a&gt;&lt;br&gt;
+&lt;a href="mailto:libraries@we-online.com"&gt;libraries@we-online.com&lt;/a&gt; &lt;BR&gt;&lt;BR&gt;
+&lt;br&gt;&lt;HR&gt;&lt;BR&gt;
+Neither CadSoft nor WE-eiSos does warrant that this library is error-free or &lt;br&gt;
+that it meets your specific requirements.&lt;br&gt;&lt;BR&gt;
+Please contact us for more information.&lt;br&gt;&lt;BR&gt;&lt;br&gt;
+&lt;hr&gt;
+Eagle Version 6, Library Revision 2015c, 2015-06-02&lt;br&gt;
+&lt;HR&gt;
+Copyright: Würth Elektronik</description>
+<packages>
+<package name="629105150521">
+<description>&lt;b&gt;629105150521&lt;/b&gt;&lt;p&gt;
+WR-COM_USB_Micro Type B_Horizontal_SMT Micro Type B Horizontal SMT - 3A current at Pin1 &amp; Pin 5 - with Pegs and THT shielding Pins  - T&amp;R Packaging</description>
+<circle x="-1.32" y="5.1" radius="0.012" width="0.6" layer="21"/>
+<wire x1="-2.54305" y1="-1.788065625" x2="-1.97274375" y2="-1.787809375" width="0.1016" layer="21" curve="34.0506"/>
+<wire x1="-1.97274375" y1="-1.787809375" x2="-1.97194375" y2="-1.787565625" width="0.1016" layer="21" curve="0.049201"/>
+<wire x1="-1.97274375" y1="-1.787809375" x2="-1.7650375" y2="-1.528553125" width="0.1016" layer="21" curve="68.6004"/>
+<wire x1="1.765" y1="-1.528040625" x2="1.972253125" y2="-1.787659375" width="0.1016" layer="21" curve="68.6"/>
+<wire x1="-2.751371875" y1="-1.528040625" x2="-2.54411875" y2="-1.7876625" width="0.1016" layer="21" curve="68.6001"/>
+<wire x1="2.543625" y1="-1.787809375" x2="2.75133125" y2="-1.528553125" width="0.1016" layer="21" curve="68.5998"/>
+<wire x1="1.97331875" y1="-1.788065625" x2="2.544425" y2="-1.787565625" width="0.1016" layer="21" curve="34.0999"/>
+<wire x1="1.972559375" y1="-1.16506875" x2="2.491740625" y2="-1.16506875" width="0.1016" layer="21"/>
+<wire x1="1.71298125" y1="1.223040625" x2="1.972559375" y2="-1.16506875" width="0.1016" layer="21"/>
+<wire x1="2.75133125" y1="-1.528290625" x2="2.95885" y2="1.223040625" width="0.1016" layer="21"/>
+<wire x1="-4" y1="-2.4" x2="4" y2="-2.4" width="0.127" layer="21"/>
+<wire x1="1.5052" y1="1.223040625" x2="1.76505" y2="-1.528290625" width="0.1016" layer="21"/>
+<wire x1="-4" y1="-2.4" x2="-4" y2="4.2" width="0.127" layer="21"/>
+<wire x1="-1.71323125" y1="1.223040625" x2="-1.505459375" y2="1.223040625" width="0.1016" layer="21"/>
+<wire x1="-1.76505" y1="-1.528290625" x2="-1.505459375" y2="1.223040625" width="0.1016" layer="21"/>
+<wire x1="-1.972559375" y1="-1.16506875" x2="-1.71323125" y2="1.223040625" width="0.1016" layer="21"/>
+<wire x1="4" y1="-2.4" x2="4" y2="4.2" width="0.127" layer="21"/>
+<wire x1="-4" y1="4.2" x2="4" y2="4.2" width="0.127" layer="21"/>
+<wire x1="-2.9591" y1="1.223040625" x2="-2.75133125" y2="1.223040625" width="0.1016" layer="21"/>
+<wire x1="2.75133125" y1="1.223040625" x2="2.95885" y2="1.223040625" width="0.1016" layer="21"/>
+<wire x1="1.5052" y1="1.223040625" x2="1.71298125" y2="1.223040625" width="0.1016" layer="21"/>
+<wire x1="-2.491990625" y1="-1.16506875" x2="-1.972559375" y2="-1.16506875" width="0.1016" layer="21"/>
+<wire x1="-2.75133125" y1="1.223040625" x2="-2.491990625" y2="-1.16506875" width="0.1016" layer="21"/>
+<wire x1="-2.9591" y1="1.223040625" x2="-2.75133125" y2="-1.528290625" width="0.1016" layer="21"/>
+<wire x1="2.491740625" y1="-1.16506875" x2="2.75133125" y2="1.223040625" width="0.1016" layer="21"/>
+<smd name="1" x="-1.3" y="3.8" dx="0.45" dy="1.3" layer="1"/>
+<smd name="2" x="-0.65" y="3.8" dx="0.45" dy="1.3" layer="1"/>
+<smd name="3" x="0" y="3.8" dx="0.45" dy="1.3" layer="1"/>
+<smd name="4" x="0.65" y="3.8" dx="0.45" dy="1.3" layer="1"/>
+<smd name="5" x="1.3" y="3.8" dx="0.45" dy="1.3" layer="1"/>
+<pad name="Z1" x="-3.725" y="3.8" drill="0.85" diameter="1.2" shape="long" rot="R90"/>
+<pad name="Z2" x="3.725" y="3.8" drill="0.85" diameter="1.2" shape="long" rot="R90"/>
+<pad name="Z4" x="-3.875" y="0" drill="0.55" diameter="0.9" shape="long" rot="R90"/>
+<pad name="Z3" x="3.875" y="0" drill="0.55" diameter="0.9" shape="long" rot="R90"/>
+<text x="-4.5516" y="6.4556" size="2.032" layer="25" font="vector" ratio="13" rot="SR0">&gt;NAME</text>
+<text x="-4.5516" y="-6" size="2.032" layer="27" font="vector" ratio="13" rot="SR0">&gt;VALUE</text>
+<hole x="-2.5" y="2.75" drill="0.8"/>
+<hole x="2.5" y="2.75" drill="0.8"/>
+<wire x1="-4.15" y1="4.15" x2="-4.15" y2="3.35" width="0.127" layer="46"/>
+<wire x1="-3.3" y1="4.15" x2="-3.3" y2="3.35" width="0.127" layer="46"/>
+<wire x1="-4.15" y1="4.15" x2="-3.3" y2="4.15" width="0.127" layer="46" curve="-180"/>
+<wire x1="-4.15" y1="3.35" x2="-3.3" y2="3.35" width="0.127" layer="46" curve="180"/>
+<wire x1="3.3" y1="4.15" x2="3.3" y2="3.35" width="0.127" layer="46"/>
+<wire x1="4.15" y1="4.15" x2="4.15" y2="3.35" width="0.127" layer="46"/>
+<wire x1="3.3" y1="4.15" x2="4.15" y2="4.15" width="0.127" layer="46" curve="-180"/>
+<wire x1="3.3" y1="3.35" x2="4.15" y2="3.35" width="0.127" layer="46" curve="180"/>
+<wire x1="-4.15" y1="0.35" x2="-4.15" y2="-0.35" width="0.127" layer="46"/>
+<wire x1="-3.6" y1="0.35" x2="-3.6" y2="-0.35" width="0.127" layer="46"/>
+<wire x1="-4.15" y1="0.35" x2="-3.6" y2="0.35" width="0.127" layer="46" curve="-180"/>
+<wire x1="-4.15" y1="-0.35" x2="-3.6" y2="-0.35" width="0.127" layer="46" curve="180"/>
+<wire x1="3.6" y1="0.35" x2="3.6" y2="-0.35" width="0.127" layer="46"/>
+<wire x1="4.15" y1="0.35" x2="4.15" y2="-0.35" width="0.127" layer="46"/>
+<wire x1="3.6" y1="0.35" x2="4.15" y2="0.35" width="0.127" layer="46" curve="-180"/>
+<wire x1="3.6" y1="-0.35" x2="4.15" y2="-0.35" width="0.127" layer="46" curve="180"/>
+<wire x1="-4.5" y1="5.25" x2="4.5" y2="5.25" width="0.127" layer="39"/>
+<wire x1="4.5" y1="5.25" x2="4.5" y2="-2.65" width="0.127" layer="39"/>
+<wire x1="4.5" y1="-2.65" x2="-4.5" y2="-2.65" width="0.127" layer="39"/>
+<wire x1="-4.5" y1="-2.65" x2="-4.5" y2="5.25" width="0.127" layer="39"/>
+<text x="-2" y="-3.7" size="0.6096" layer="51">PCB edge</text>
+</package>
+</packages>
+<symbols>
+<symbol name="5_USB">
+<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="3.81" y2="7.62" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<text x="-5.08" y="8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-20.32" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="5GND" x="-7.62" y="-5.08" length="middle" direction="pas"/>
+<pin name="4ID" x="-7.62" y="-2.54" length="middle" direction="pas"/>
+<pin name="3D+" x="-7.62" y="0" length="middle" direction="pas"/>
+<pin name="2D-" x="-7.62" y="2.54" length="middle" direction="pas"/>
+<pin name="1VCC" x="-7.62" y="5.08" length="middle" direction="pas"/>
+<wire x1="5.08" y1="8.89" x2="5.08" y2="-8.89" width="0.254" layer="94" style="shortdash"/>
+<wire x1="5.08" y1="-8.89" x2="1.27" y2="-8.89" width="0.254" layer="94" style="shortdash"/>
+<wire x1="1.27" y1="-8.89" x2="1.27" y2="-10.16" width="0.254" layer="94" style="shortdash"/>
+<pin name="GND@1" x="-5.08" y="-10.16" length="middle"/>
+<pin name="GND@2" x="-5.08" y="-12.7" length="middle"/>
+<wire x1="1.27" y1="-10.16" x2="1.27" y2="-12.7" width="0.254" layer="94" style="shortdash"/>
+<wire x1="0" y1="-10.16" x2="1.27" y2="-10.16" width="0.254" layer="94" style="shortdash"/>
+<wire x1="0" y1="-12.7" x2="1.27" y2="-12.7" width="0.254" layer="94" style="shortdash"/>
+<wire x1="1.27" y1="8.89" x2="5.08" y2="8.89" width="0.254" layer="94" style="shortdash"/>
+<text x="4.445" y="-2.2225" size="1.778" layer="94" rot="R90">USB</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="629105150521" prefix="K" uservalue="yes">
+<description>&lt;b&gt;WR-COM_USB_Micro Type B_Horizontal_SMT ;&lt;BR&gt;
+&lt;/b&gt;Micro Type B Horizontal SMT - 3A current at Pin1 &amp; Pin 5 - with Pegs and THT shielding Pins  - T&amp;R Packaging
+&lt;/b&gt;&lt;br&gt;Code : Con_I-O_COM_USB_2.0_B_629105150521_629105150521
+
+
+
+&lt;p&gt;&lt;a href="http://katalog.we-online.de/media/images/eican/Con_I-O_COM_USB_2.0_B_629105150521_pf2.jpg"&gt;
+
+&lt;img src="http://katalog.we-online.de/media/images/eican/Con_I-O_COM_USB_2.0_B_629105150521_pf2.jpg" width="320"&gt;&lt;/a&gt;&lt;p&gt;
+
+&lt;p&gt;Details see: &lt;a href="http://katalog.we-online.de/em/datasheet/629105150521.pdf"&gt;http://katalog.we-online.de/em/datasheet/629105150521.pdf&lt;/a&gt;
+&lt;p&gt;Created 12/08/2014, Dan Xu
+&lt;p&gt;2014 (C) Wurth Elektronik</description>
+<gates>
+<gate name="G$1" symbol="5_USB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="629105150521">
+<connects>
+<connect gate="G$1" pin="1VCC" pad="1"/>
+<connect gate="G$1" pin="2D-" pad="2"/>
+<connect gate="G$1" pin="3D+" pad="3"/>
+<connect gate="G$1" pin="4ID" pad="4"/>
+<connect gate="G$1" pin="5GND" pad="5"/>
+<connect gate="G$1" pin="GND@1" pad="Z1 Z2"/>
+<connect gate="G$1" pin="GND@2" pad="Z3 Z4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -21611,9 +21739,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="L14" library="_Bachelor-IQModulator" deviceset="L" device="L0805" value="10u"/>
 <part name="L15" library="_Bachelor_IQ_Mischer" deviceset="L1008" device="" value="15u"/>
 <part name="L16" library="_Bachelor_IQ_Mischer" deviceset="L1008" device="" value="15u"/>
-<part name="U1" library="MicroUSB" deviceset="USB" device="&quot;&quot;"/>
-<part name="GND33" library="supply1" deviceset="GND" device=""/>
-<part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="IC5" library="microbuilder" deviceset="FT232RL-FULL" device="SSOP"/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
@@ -21625,7 +21750,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="C51" library="resistor" deviceset="C-EU" device="C0805" value="15p"/>
 <part name="GND36" library="supply1" deviceset="GND" device=""/>
 <part name="C52" library="resistor" deviceset="C-EU" device="C0805" value="4.7u"/>
-<part name="C53" library="resistor" deviceset="C-EU" device="C0805" value="0.1u"/>
+<part name="C53" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="GND38" library="supply1" deviceset="GND" device=""/>
 <part name="GND39" library="supply1" deviceset="GND" device=""/>
 <part name="C54" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
@@ -21654,8 +21779,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="C4" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="GND31" library="supply1" deviceset="GND" device=""/>
 <part name="JP2" library="jumper" deviceset="JP2E" device=""/>
-<part name="X2" library="con-molex" deviceset="KK-156-2" device=""/>
-<part name="X3" library="con-molex" deviceset="KK-156-2" device=""/>
+<part name="X2" library="con-molex" deviceset="KK-156-2" device="" value="CLK2"/>
+<part name="CLK3" library="con-molex" deviceset="KK-156-2" device=""/>
 <part name="GND32" library="supply1" deviceset="GND" device=""/>
 <part name="GND41" library="supply1" deviceset="GND" device=""/>
 <part name="L18" library="_Bachelor_IQ_Mischer" deviceset="L1008" device="" value="10u"/>
@@ -21755,7 +21880,16 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="U$22" library="_Bachelor-IQModulator" deviceset="RS_BNC_PCB" device=""/>
 <part name="GND56" library="supply1" deviceset="GND" device=""/>
-<part name="R17" library="resistor" deviceset="R-EU_" device="R0805" value="100"/>
+<part name="R17" library="resistor" deviceset="R-EU_" device="R0805" value="500"/>
+<part name="C49" library="resistor" deviceset="C-EU" device="C0805" value="1u"/>
+<part name="C64" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="K1" library="Input-Output_Connectors_rev15d" deviceset="629105150521" device=""/>
+<part name="GND33" library="supply1" deviceset="GND" device=""/>
+<part name="P+1" library="supply1" deviceset="+5V" device=""/>
+<part name="C65" library="resistor" deviceset="C-EU" device="C0805" value="10n"/>
+<part name="GND57" library="supply1" deviceset="GND" device=""/>
+<part name="C66" library="_Bachelor-IQModulator" deviceset="C-EU" device="C0805" value="1p"/>
+<part name="C67" library="_Bachelor-IQModulator" deviceset="C-EU" device="C0805" value="1p"/>
 </parts>
 <sheets>
 <sheet>
@@ -21778,8 +21912,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="IC2" gate="C" x="22.86" y="-27.94"/>
 <instance part="IC2" gate="D" x="68.58" y="-30.48"/>
 <instance part="IC2" gate="P" x="132.08" y="-2.54"/>
-<instance part="GND6" gate="1" x="132.08" y="-12.7"/>
-<instance part="+3V2" gate="G$1" x="132.08" y="7.62"/>
+<instance part="GND6" gate="1" x="132.08" y="-15.24"/>
+<instance part="+3V2" gate="G$1" x="132.08" y="10.16"/>
 <instance part="R4" gate="G$1" x="-2.54" y="-30.48"/>
 <instance part="R5" gate="G$1" x="48.26" y="-33.02"/>
 <instance part="R6" gate="G$1" x="45.72" y="17.78"/>
@@ -21897,6 +22031,9 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="GND1" gate="1" x="-53.34" y="48.26"/>
 <instance part="C62" gate="G$1" x="0" y="53.34"/>
 <instance part="R17" gate="G$1" x="-50.8" y="-68.58"/>
+<instance part="C64" gate="G$1" x="127" y="-5.08" rot="R180"/>
+<instance part="C65" gate="G$1" x="-20.32" y="43.18"/>
+<instance part="GND57" gate="1" x="-20.32" y="35.56"/>
 </instances>
 <busses>
 </busses>
@@ -21905,6 +22042,11 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <segment>
 <pinref part="IC2" gate="P" pin="V-"/>
 <pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="132.08" y1="-12.7" x2="132.08" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="C64" gate="G$1" pin="1"/>
+<wire x1="127" y1="-7.62" x2="127" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="127" y1="-12.7" x2="132.08" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="132.08" y="-12.7"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="2"/>
@@ -22066,6 +22208,10 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="C62" gate="G$1" pin="2"/>
 </segment>
+<segment>
+<pinref part="C65" gate="G$1" pin="2"/>
+<pinref part="GND57" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
@@ -22082,6 +22228,11 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <segment>
 <pinref part="IC2" gate="P" pin="V+"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<wire x1="132.08" y1="7.62" x2="132.08" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="C64" gate="G$1" pin="2"/>
+<wire x1="127" y1="0" x2="127" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="127" y1="7.62" x2="132.08" y2="7.62" width="0.1524" layer="91"/>
+<junction x="132.08" y="7.62"/>
 </segment>
 <segment>
 <pinref part="R22" gate="G$1" pin="2"/>
@@ -22775,6 +22926,13 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <junction x="-66.04" y="-68.58"/>
 </segment>
 </net>
+<net name="N$42" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="BYPASS"/>
+<pinref part="C65" gate="G$1" pin="1"/>
+<wire x1="-20.32" y1="45.72" x2="-22.86" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -22790,7 +22948,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="IC6" gate="A" x="88.9" y="55.88"/>
 <instance part="IC6" gate="B" x="88.9" y="25.4"/>
 <instance part="IC6" gate="P" x="124.46" y="55.88"/>
-<instance part="+3V11" gate="G$1" x="124.46" y="66.04"/>
+<instance part="+3V11" gate="G$1" x="124.46" y="68.58"/>
 <instance part="GND19" gate="1" x="124.46" y="45.72"/>
 <instance part="+3V12" gate="G$1" x="43.18" y="48.26"/>
 <instance part="IC7" gate="G$1" x="63.5" y="-35.56"/>
@@ -22815,9 +22973,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="+3V15" gate="G$1" x="22.86" y="-15.24"/>
 <instance part="+3V16" gate="G$1" x="12.7" y="-15.24"/>
 <instance part="FRAME2" gate="G$1" x="-116.84" y="-294.64"/>
-<instance part="U1" gate="G$1" x="-7.62" y="78.74" rot="R90"/>
-<instance part="GND33" gate="1" x="-12.7" y="63.5"/>
-<instance part="P+1" gate="1" x="-2.54" y="63.5" rot="R180"/>
 <instance part="IC5" gate="G$1" x="-60.96" y="-53.34"/>
 <instance part="P+4" gate="1" x="-106.68" y="-38.1"/>
 <instance part="GND34" gate="1" x="-93.98" y="-73.66"/>
@@ -22869,10 +23024,16 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </instance>
 <instance part="GND31" gate="1" x="-55.88" y="-109.22"/>
 <instance part="JP2" gate="1" x="-66.04" y="-109.22" rot="R180"/>
-<instance part="X2" gate="-1" x="119.38" y="-38.1"/>
-<instance part="X2" gate="-2" x="119.38" y="-40.64"/>
-<instance part="X3" gate="-1" x="104.14" y="-43.18"/>
-<instance part="X3" gate="-2" x="104.14" y="-45.72"/>
+<instance part="X2" gate="-1" x="119.38" y="-38.1" smashed="yes">
+<attribute name="NAME" x="121.92" y="-38.862" size="1.524" layer="95"/>
+<attribute name="VALUE" x="126.238" y="-39.243" size="1.778" layer="96"/>
+</instance>
+<instance part="X2" gate="-2" x="119.38" y="-40.64" smashed="yes">
+<attribute name="NAME" x="121.92" y="-41.402" size="1.524" layer="95"/>
+<attribute name="VALUE" x="126.238" y="-41.783" size="1.778" layer="96"/>
+</instance>
+<instance part="CLK3" gate="-1" x="104.14" y="-43.18"/>
+<instance part="CLK3" gate="-2" x="104.14" y="-45.72"/>
 <instance part="GND32" gate="1" x="114.3" y="-40.64" smashed="yes" rot="R270">
 <attribute name="VALUE" x="111.76" y="-38.1" size="1.778" layer="96" rot="R270"/>
 </instance>
@@ -22881,6 +23042,13 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </instance>
 <instance part="L19" gate="&gt;NAME" x="71.12" y="-2.54"/>
 <instance part="L20" gate="&gt;NAME" x="63.5" y="-2.54"/>
+<instance part="C49" gate="G$1" x="132.08" y="58.42" smashed="yes">
+<attribute name="NAME" x="133.604" y="58.801" size="1.778" layer="95"/>
+<attribute name="VALUE" x="131.699" y="59.944" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="K1" gate="G$1" x="0" y="76.2" rot="R90"/>
+<instance part="GND33" gate="1" x="7.62" y="53.34"/>
+<instance part="P+1" gate="1" x="-5.08" y="53.34" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -22889,6 +23057,10 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <segment>
 <pinref part="IC6" gate="P" pin="GND"/>
 <pinref part="GND19" gate="1" pin="GND"/>
+<pinref part="C49" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="48.26" x2="132.08" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="48.26" x2="132.08" y2="53.34" width="0.1524" layer="91"/>
+<junction x="124.46" y="48.26"/>
 </segment>
 <segment>
 <pinref part="GND20" gate="1" pin="GND"/>
@@ -22980,7 +23152,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="GND32" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="X3" gate="-2" pin="S"/>
+<pinref part="CLK3" gate="-2" pin="S"/>
 <pinref part="GND41" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -22989,15 +23161,30 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="-63.5" y1="-106.68" x2="-55.88" y2="-106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<pinref part="K1" gate="G$1" pin="5GND"/>
+<wire x1="5.08" y1="68.58" x2="5.08" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="K1" gate="G$1" pin="GND@1"/>
+<wire x1="10.16" y1="71.12" x2="10.16" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="60.96" x2="7.62" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="60.96" x2="5.08" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="60.96" x2="12.7" y2="60.96" width="0.1524" layer="91"/>
+<junction x="10.16" y="60.96"/>
+<pinref part="K1" gate="G$1" pin="GND@2"/>
+<wire x1="12.7" y1="60.96" x2="12.7" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="60.96" x2="7.62" y2="55.88" width="0.1524" layer="91"/>
+<junction x="7.62" y="60.96"/>
 <pinref part="GND33" gate="1" pin="GND"/>
-<pinref part="U1" gate="G$1" pin="GND"/>
-<wire x1="-12.7" y1="66.04" x2="-12.7" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="IC6" gate="P" pin="VCC"/>
 <pinref part="+3V11" gate="G$1" pin="+3V3"/>
+<wire x1="124.46" y1="66.04" x2="124.46" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="C49" gate="G$1" pin="1"/>
+<wire x1="132.08" y1="60.96" x2="132.08" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="66.04" x2="124.46" y2="66.04" width="0.1524" layer="91"/>
+<junction x="124.46" y="66.04"/>
 </segment>
 <segment>
 <pinref part="IC6" gate="A" pin="CLR"/>
@@ -23117,11 +23304,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="VBUS"/>
-<wire x1="-2.54" y1="73.66" x2="-2.54" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="P+1" gate="1" pin="+5V"/>
-</segment>
-<segment>
 <pinref part="IC5" gate="G$1" pin="VCC"/>
 <wire x1="-81.28" y1="-43.18" x2="-99.06" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="-99.06" y1="-43.18" x2="-99.06" y2="-40.64" width="0.1524" layer="91"/>
@@ -23137,29 +23319,34 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="IC5" gate="G$1" pin="VCCIO"/>
 <wire x1="-106.68" y1="-48.26" x2="-81.28" y2="-48.26" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="K1" gate="G$1" pin="1VCC"/>
+<wire x1="-5.08" y1="68.58" x2="-5.08" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="1" pin="+5V"/>
+</segment>
 </net>
 <net name="D+" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="D+"/>
-<wire x1="-7.62" y1="73.66" x2="-7.62" y2="60.96" width="0.1524" layer="91"/>
-<label x="-10.16" y="55.88" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="IC5" gate="G$1" pin="USBDP"/>
 <wire x1="-81.28" y1="-38.1" x2="-88.9" y2="-38.1" width="0.1524" layer="91"/>
 <label x="-88.9" y="-38.1" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="K1" gate="G$1" pin="3D+"/>
+<wire x1="0" y1="68.58" x2="0" y2="60.96" width="0.1524" layer="91"/>
+<label x="0" y="60.96" size="1.778" layer="95" rot="R90"/>
+</segment>
 </net>
 <net name="D-" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="D-"/>
-<wire x1="-5.08" y1="73.66" x2="-5.08" y2="60.96" width="0.1524" layer="91"/>
-<label x="-5.08" y="55.88" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="IC5" gate="G$1" pin="USBDM"/>
 <wire x1="-81.28" y1="-35.56" x2="-88.9" y2="-35.56" width="0.1524" layer="91"/>
 <label x="-88.9" y="-35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="K1" gate="G$1" pin="2D-"/>
+<wire x1="-2.54" y1="68.58" x2="-2.54" y2="60.96" width="0.1524" layer="91"/>
+<label x="-2.54" y="60.96" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -23345,7 +23532,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <segment>
 <pinref part="IC7" gate="G$1" pin="CLK2"/>
 <wire x1="83.82" y1="-43.18" x2="101.6" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="X3" gate="-1" pin="S"/>
+<pinref part="CLK3" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="N$25" class="0">
@@ -23521,8 +23708,10 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="GND55" gate="1" x="58.42" y="-91.44"/>
 <instance part="C63" gate="G$1" x="-81.28" y="-114.3" rot="R90"/>
 <instance part="GND2" gate="1" x="-83.82" y="-121.92"/>
-<instance part="U$22" gate="G$1" x="83.82" y="-104.14" rot="R180"/>
-<instance part="GND56" gate="1" x="78.74" y="-93.98" rot="R180"/>
+<instance part="U$22" gate="G$1" x="83.82" y="0" rot="R180"/>
+<instance part="GND56" gate="1" x="78.74" y="10.16" rot="R180"/>
+<instance part="C66" gate="G$1" x="27.94" y="-121.92"/>
+<instance part="C67" gate="G$1" x="22.86" y="-71.12"/>
 </instances>
 <busses>
 </busses>
@@ -23643,8 +23832,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </segment>
 <segment>
 <pinref part="U$22" gate="G$1" pin="2"/>
-<wire x1="81.28" y1="-101.6" x2="78.74" y2="-101.6" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="-101.6" x2="78.74" y2="-96.52" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="2.54" x2="78.74" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="2.54" x2="78.74" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="GND56" gate="1" pin="GND"/>
 </segment>
 </net>
@@ -23890,7 +24079,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <segment>
 <pinref part="U$13" gate="G$1" pin="IN"/>
 <wire x1="-63.5" y1="-17.78" x2="-53.34" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-53.34" y1="-17.78" x2="-53.34" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-58.42" y="-17.78" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -23958,9 +24146,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </segment>
 <segment>
 <pinref part="U$21" gate="G$1" pin="PRIM_TOP"/>
-<wire x1="58.42" y1="-104.14" x2="81.28" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="-104.14" x2="71.12" y2="-104.14" width="0.1524" layer="91"/>
 <label x="60.96" y="-104.14" size="1.778" layer="95"/>
-<pinref part="U$22" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="CONTROL1" class="0">
@@ -24036,17 +24223,24 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <net name="N$57" class="0">
 <segment>
 <pinref part="U$17" gate="G$1" pin="C"/>
-<wire x1="15.24" y1="-127" x2="40.64" y2="-127" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="-127" x2="27.94" y2="-127" width="0.1524" layer="91"/>
 <pinref part="U$21" gate="G$1" pin="SEC_TOP"/>
+<wire x1="27.94" y1="-127" x2="40.64" y2="-127" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-127" x2="40.64" y2="-106.68" width="0.1524" layer="91"/>
+<pinref part="C66" gate="G$1" pin="2"/>
+<junction x="27.94" y="-127"/>
 </segment>
 </net>
 <net name="N$58" class="0">
 <segment>
 <pinref part="U$18" gate="G$1" pin="C"/>
-<wire x1="15.24" y1="-66.04" x2="40.64" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="-66.04" x2="22.86" y2="-66.04" width="0.1524" layer="91"/>
 <pinref part="U$21" gate="G$1" pin="SEC_BOT"/>
+<wire x1="22.86" y1="-66.04" x2="40.64" y2="-66.04" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-83.82" x2="40.64" y2="-66.04" width="0.1524" layer="91"/>
+<pinref part="C67" gate="G$1" pin="1"/>
+<wire x1="22.86" y1="-68.58" x2="22.86" y2="-66.04" width="0.1524" layer="91"/>
+<junction x="22.86" y="-66.04"/>
 </segment>
 </net>
 <net name="N$59" class="0">
@@ -24058,6 +24252,11 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="7.62" y1="-132.08" x2="7.62" y2="-104.14" width="0.1524" layer="91"/>
 <junction x="7.62" y="-132.08"/>
 <pinref part="R30" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="-132.08" x2="10.16" y2="-104.14" width="0.1524" layer="91"/>
+<junction x="10.16" y="-132.08"/>
+<wire x1="10.16" y1="-104.14" x2="22.86" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="-104.14" x2="22.86" y2="-76.2" width="0.1524" layer="91"/>
+<pinref part="C67" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$60" class="0">
@@ -24069,6 +24268,11 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="7.62" y1="-71.12" x2="10.16" y2="-71.12" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="-93.98" x2="7.62" y2="-71.12" width="0.1524" layer="91"/>
 <junction x="7.62" y="-71.12"/>
+<wire x1="10.16" y1="-71.12" x2="10.16" y2="-99.06" width="0.1524" layer="91"/>
+<junction x="10.16" y="-71.12"/>
+<wire x1="10.16" y1="-99.06" x2="27.94" y2="-99.06" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="-99.06" x2="27.94" y2="-119.38" width="0.1524" layer="91"/>
+<pinref part="C66" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$61" class="0">
@@ -24175,6 +24379,53 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <junction x="-73.66" y="-111.76"/>
 <wire x1="-73.66" y1="-106.68" x2="-91.44" y2="-106.68" width="0.1524" layer="91"/>
 <label x="-88.9" y="-106.68" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="LOAD" class="0">
+<segment>
+<pinref part="U$22" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="0" x2="53.34" y2="0" width="0.1524" layer="91"/>
+<label x="66.04" y="0" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$16" gate="G$1" pin="OUT"/>
+<wire x1="68.58" y1="58.42" x2="55.88" y2="58.42" width="0.1524" layer="91"/>
+<label x="55.88" y="58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$14" gate="G$1" pin="OUT"/>
+<wire x1="-17.78" y1="-22.86" x2="-30.48" y2="-22.86" width="0.1524" layer="91"/>
+<label x="-27.94" y="-22.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$13" gate="G$1" pin="OUT"/>
+<wire x1="-96.52" y1="-17.78" x2="-109.22" y2="-17.78" width="0.1524" layer="91"/>
+<label x="-106.68" y="-17.78" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="G$1" pin="OUT"/>
+<wire x1="-109.22" y1="45.72" x2="-121.92" y2="45.72" width="0.1524" layer="91"/>
+<label x="-119.38" y="45.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$12" gate="G$1" pin="OUT"/>
+<wire x1="-20.32" y1="43.18" x2="-35.56" y2="43.18" width="0.1524" layer="91"/>
+<label x="-35.56" y="43.18" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$15" gate="G$1" pin="OUT"/>
+<wire x1="66.04" y1="124.46" x2="55.88" y2="124.46" width="0.1524" layer="91"/>
+<label x="55.88" y="124.46" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$10" gate="G$1" pin="OUT"/>
+<wire x1="-22.86" y1="119.38" x2="-38.1" y2="119.38" width="0.1524" layer="91"/>
+<label x="-35.56" y="119.38" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$9" gate="G$1" pin="OUT"/>
+<wire x1="-109.22" y1="119.38" x2="-121.92" y2="119.38" width="0.1524" layer="91"/>
+<label x="-119.38" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
