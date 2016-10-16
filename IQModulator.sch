@@ -21853,6 +21853,9 @@ WR-COM_USB_Micro Type B_Horizontal_SMT Micro Type B Horizontal SMT - 3A current 
 <part name="R33" library="resistor" deviceset="R-EU_" device="R0805" value="100"/>
 <part name="C75" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="GND61" library="supply1" deviceset="GND" device=""/>
+<part name="R18" library="resistor" deviceset="R-EU_" device="R0805" value="0"/>
+<part name="GND49" library="supply1" deviceset="GND" device=""/>
+<part name="GND62" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -22006,6 +22009,9 @@ WR-COM_USB_Micro Type B_Horizontal_SMT Micro Type B Horizontal SMT - 3A current 
 <instance part="R33" gate="G$1" x="63.5" y="-71.12"/>
 <instance part="C75" gate="G$1" x="73.66" y="-81.28" rot="R180"/>
 <instance part="GND61" gate="1" x="58.42" y="-88.9"/>
+<instance part="R18" gate="G$1" x="-43.18" y="-93.98"/>
+<instance part="GND49" gate="1" x="-50.8" y="-93.98" rot="R270"/>
+<instance part="GND62" gate="1" x="-35.56" y="-93.98" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -22200,6 +22206,14 @@ WR-COM_USB_Micro Type B_Horizontal_SMT Micro Type B Horizontal SMT - 3A current 
 <pinref part="GND61" gate="1" pin="GND"/>
 <wire x1="58.42" y1="-86.36" x2="53.34" y2="-86.36" width="0.1524" layer="91"/>
 <junction x="58.42" y="-86.36"/>
+</segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="1"/>
+<pinref part="GND49" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="2"/>
+<pinref part="GND62" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
