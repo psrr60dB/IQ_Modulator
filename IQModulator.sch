@@ -21845,7 +21845,6 @@ WR-COM_USB_Micro Type B_Horizontal_SMT Micro Type B Horizontal SMT - 3A current 
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
 <part name="L19" library="_Bachelor_IQ_Mischer" deviceset="L1008" device="" value="10u"/>
 <part name="GND60" library="supply1" deviceset="GND" device=""/>
-<part name="C72" library="resistor" deviceset="CPOL-EU" device="C" value="47u"/>
 <part name="C73" library="resistor" deviceset="CPOL-EU" device="C" value="47u"/>
 <part name="R31" library="resistor" deviceset="R-EU_" device="R0805" value="4.7k"/>
 <part name="R32" library="resistor" deviceset="R-EU_" device="R0805" value="4.7k"/>
@@ -22001,7 +22000,6 @@ WR-COM_USB_Micro Type B_Horizontal_SMT Micro Type B Horizontal SMT - 3A current 
 <instance part="P+14" gate="1" x="-101.6" y="43.18"/>
 <instance part="L19" gate="&gt;NAME" x="-86.36" y="35.56" rot="R90"/>
 <instance part="GND60" gate="1" x="-93.98" y="25.4"/>
-<instance part="C72" gate="G$1" x="-93.98" y="33.02"/>
 <instance part="C73" gate="G$1" x="-78.74" y="33.02"/>
 <instance part="R31" gate="G$1" x="40.64" y="-63.5" rot="R90"/>
 <instance part="R32" gate="G$1" x="40.64" y="-78.74" rot="R90"/>
@@ -22189,8 +22187,6 @@ WR-COM_USB_Micro Type B_Horizontal_SMT Micro Type B Horizontal SMT - 3A current 
 <segment>
 <wire x1="-78.74" y1="27.94" x2="-93.98" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="GND60" gate="1" pin="GND"/>
-<junction x="-93.98" y="27.94"/>
-<pinref part="C72" gate="G$1" pin="-"/>
 <pinref part="C73" gate="G$1" pin="-"/>
 </segment>
 <segment>
@@ -22856,10 +22852,7 @@ WR-COM_USB_Micro Type B_Horizontal_SMT Micro Type B Horizontal SMT - 3A current 
 <pinref part="P+14" gate="1" pin="+5V"/>
 <wire x1="-101.6" y1="35.56" x2="-101.6" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="L19" gate="&gt;NAME" pin="1"/>
-<pinref part="C72" gate="G$1" pin="+"/>
-<wire x1="-93.98" y1="35.56" x2="-91.44" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="-101.6" y1="35.56" x2="-93.98" y2="35.56" width="0.1524" layer="91"/>
-<junction x="-93.98" y="35.56"/>
+<wire x1="-101.6" y1="35.56" x2="-91.44" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$16" class="0">
